@@ -5,26 +5,26 @@
 
 #### GET
 ```
-/api/cajas get All
+ud25-almacenes.herokuapp.com/api/cajas get All
 
-/api/cajas/{num_ref}  get por numRef
+ud25-almacenes.herokuapp.com/api/cajas/{num_ref}  get por numRef
 
-/api/cajas/almacenes/{almacen}  get por Almacen
+ud25-almacenes.herokuapp.com/api/cajas/almacenes/{almacen}  get por Almacen
 ```
 
 #### DELETE
 ```
-/api/cajas/{num_ref} 
+ud25-almacenes.herokuapp.com/api/cajas/{num_ref} 
 ```
 
 #### POST
 ```
-/api/cajas/   RequestBody
+ud25-almacenes.herokuapp.com/api/cajas/   RequestBody
 ```
 
 #### PUT
 ```
-/api/cajas/{num_ref}   RequestBody
+ud25-almacenes.herokuapp.com/api/cajas/{num_ref}   RequestBody
 ```
 
 
@@ -32,22 +32,22 @@
 
 #### GET
 ```
-/api/almacenes  get ALL
+ud25-almacenes.herokuapp.com/api/almacenes  get ALL
 
-/api/almacenes/{id}  get by id
+ud25-almacenes.herokuapp.com/api/almacenes/{id}  get by id
 ```
 
 #### DELETE
 ```
-/api/almacenes/{id}  
+ud25-almacenes.herokuapp.com/api/almacenes/{id}  
 ```
 
 #### POST
 ```
-/api/almacenes  REQUEST BODY
+ud25-almacenes.herokuapp.com/api/almacenes  REQUEST BODY
 ```
 
 #### PUT 
 ```
-/api/almacenes/{id}  REQUEST BODY
+ud25-almacenes.herokuapp.com/api/almacenes/{id}  REQUEST BODY
 ```
