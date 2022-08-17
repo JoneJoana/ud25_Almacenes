@@ -30,8 +30,7 @@ public class Almacenes {
 	public Almacenes() {}
 	
 	//ver si hay que eliminar el id de constructor ya que es autoincrement
-	public Almacenes(int id, String lugar, int capacidad) {
-		this.id = id;
+	public Almacenes(String lugar, int capacidad) {
 		this.lugar = lugar;
 		this.capacidad = capacidad;
 	}
