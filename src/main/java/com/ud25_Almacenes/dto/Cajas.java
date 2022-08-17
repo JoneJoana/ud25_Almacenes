@@ -11,12 +11,12 @@ import javax.persistence.Table;
 public class Cajas {
 	
 	@Id
-	private String numRef;
+	private String num_ref;
 
 	private String contenido;
 	private int valor;
 	
-	@ManyToOne
+	@ManyToOne()
 	@JoinColumn(name="almacen")
 	private Almacenes almacen;
 	
@@ -28,12 +28,13 @@ public class Cajas {
 		this.almacen = almacen;
 	}
 	
-	public String getNumRef() {
-		return numRef;
+
+	public String getNum_ref() {
+		return num_ref;
 	}
 
-	public void setNumRef(String numRef) {
-		this.numRef = numRef;
+	public void setNum_ref(String num_ref) {
+		this.num_ref = num_ref;
 	}
 
 	public String getContenido() {
@@ -62,7 +63,7 @@ public class Cajas {
 
 	@Override
 	public String toString() {
-		return "Cajas [numRef=" + numRef + ", contenido=" + contenido + ", valor=" + valor + ", almacen=" + almacen
+		return "Cajas [num_ref=" + num_ref + ", contenido=" + contenido + ", valor=" + valor + ", almacen=" + almacen
 				+ "]";
 	}
 

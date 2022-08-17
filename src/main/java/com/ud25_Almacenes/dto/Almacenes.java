@@ -7,7 +7,6 @@ import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.persistence.JoinColumn;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
@@ -24,8 +23,8 @@ public class Almacenes {
 	private String lugar;
 	private int capacidad;
 	
-	@OneToMany
-    @JoinColumn(name="numRef")
+	@JsonIgnore
+	@OneToMany(fetch = FetchType.LAZY, mappedBy = "almacen") //mappedBy la variable de Cajas que hace ref a Almacenes
 	private List<Cajas> cajas;
 	
 	public Almacenes() {}
@@ -53,8 +52,6 @@ public class Almacenes {
 		this.capacidad = capacidad;
 	}
 
-	@JsonIgnore
-	@OneToMany(fetch = FetchType.LAZY, mappedBy = "cajas")
 	public List<Cajas> getCajas() {
 		return cajas;
 	}
