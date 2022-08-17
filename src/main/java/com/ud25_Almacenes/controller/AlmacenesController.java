@@ -38,7 +38,7 @@ public class AlmacenesController {
 	}
 	
 	@PostMapping("/almacenes")
-	public Almacenes saveAlmacen(Almacenes almacen) {
+	public Almacenes saveAlmacen(@RequestBody Almacenes almacen) {
 		return almacServImpl.saveAlmacen(almacen);
 	}
 	
