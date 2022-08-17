@@ -25,8 +25,8 @@ public class CajasServiceImpl implements ICajasService{
 	}
 
 	@Override
-	public void deleteCaja(String numRef) {
-		iCajasDao.deleteCaja(numRef);
+	public void deleteByNumRef(String numRef) {
+		iCajasDao.deleteByNumRef(numRef);
 	}
 
 	@Override

@@ -10,7 +10,7 @@ public interface ICajasService {
 	
 	public Cajas saveCaja(Cajas caja); //CREATE-UPDATE
 	
-	public void deleteCaja(String numRef); // DELETE
+	public void deleteByNumRef(String numRef); // DELETE
 	
 	public Cajas findByNumRef(String numRef); // GET BY ID/NUMREF
 	

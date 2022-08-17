@@ -29,8 +29,8 @@ public class CajasController {
 		return cajasServiceImpl.listCajas();
 	}
 	
-	@GetMapping("/cajas/{num_ref}")
-	public Cajas findByNumRef(@PathVariable(name="num_ref") String numRef) {
+	@GetMapping("/cajas/{numRef}")
+	public Cajas findByNumRef(@PathVariable(name="numRef") String numRef) {
 		return cajasServiceImpl.findByNumRef(numRef);
 	}
 	
@@ -39,10 +39,10 @@ public class CajasController {
 		return cajasServiceImpl.findByAlmacen(idAlmacen);
 	}
 	
-	@DeleteMapping("/cajas/{num_ref}")
+	@DeleteMapping("/cajas/{numRef}")
 	@Transactional
-	public void deleteCaja(@PathVariable(name="num_ref") String numRef) {
-		cajasServiceImpl.deleteCaja(numRef);
+	public void deleteByNum_ref(@PathVariable(name="numRef") String numRef) {
+		cajasServiceImpl.deleteByNumRef(numRef);
 	}
 	
 	@PostMapping("/cajas")
@@ -50,19 +50,19 @@ public class CajasController {
 		boolean exists = false;
 		
 		for (Cajas c : cajasServiceImpl.listCajas()) {
-			if(c.getNum_ref().equals(caja.getNum_ref())) {
+			if(c.getNumRef().equals(caja.getNumRef())) {
 				exists = true;
 			}
 		}
 		if(!exists) {
 			cajasServiceImpl.saveCaja(caja);
-			return "Caja "+ caja.getNum_ref()+" guardada!";
+			return "Caja "+ caja.getNumRef()+" guardada!";
 		}
 		return "Caja existente";	
 	}
 	
-	@PutMapping("/cajas/{num_ref}")
-	public Cajas updateCaja(@PathVariable(name="num_ref") String numRef, @RequestBody Cajas caja) {
+	@PutMapping("/cajas/{numRef}")
+	public Cajas updateCaja(@PathVariable(name="numRef") String numRef, @RequestBody Cajas caja) {
 		Cajas caja_selec = cajasServiceImpl.findByNumRef(numRef);
 		
 		caja_selec.setValor(caja.getValor());

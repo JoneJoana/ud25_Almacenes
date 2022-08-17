@@ -11,7 +11,7 @@ import javax.persistence.Table;
 public class Cajas {
 	
 	@Id
-	private String num_ref;
+	private String numRef;
 
 	private String contenido;
 	private int valor;
@@ -22,19 +22,20 @@ public class Cajas {
 	
 	private Cajas() {}
 
-	public Cajas(String contenido, int valor, Almacenes almacen) {
+	public Cajas(String numRef,String contenido, int valor, Almacenes almacen) {
+		this.numRef = numRef;
 		this.contenido = contenido;
 		this.valor = valor;
 		this.almacen = almacen;
 	}
 	
 
-	public String getNum_ref() {
-		return num_ref;
+	public String getNumRef() {
+		return numRef;
 	}
 
-	public void setNum_ref(String num_ref) {
-		this.num_ref = num_ref;
+	public void setNumRef(String numRef) {
+		this.numRef = numRef;
 	}
 
 	public String getContenido() {
@@ -63,7 +64,7 @@ public class Cajas {
 
 	@Override
 	public String toString() {
-		return "Cajas [num_ref=" + num_ref + ", contenido=" + contenido + ", valor=" + valor + ", almacen=" + almacen
+		return "Cajas [numRef=" + numRef + ", contenido=" + contenido + ", valor=" + valor + ", almacen=" + almacen
 				+ "]";
 	}
 

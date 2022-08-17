@@ -12,6 +12,6 @@ public interface ICajasDAO extends JpaRepository<Cajas,String>{
 	
 	public List<Cajas> findByAlmacen(int idAlmacen);
 	
-	public void deleteCaja(String numRef);	
+	public void deleteByNumRef(String numRef);	
 	
 }
