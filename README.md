@@ -1,4 +1,16 @@
 # ud25_Almacenes
+
+## T25 - en local - Info Commit 
+
+Proyecto ya creado para hacer deploy en heroku - no hay linea clara de separacion de las unidades 25 y 26. 
+posible commit version local : 
+```
+Update README.md
+commit 78a3e5b4845fb0e1a5c6c05f148e98ce4ba9d087
+```
+
+## T26 - DEPLOY HEROKU --> ultima version
+
 ## API Almacenes
 
 ### CAJAS
